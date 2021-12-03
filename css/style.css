@@ -1,0 +1,17 @@
+section{
+    display:grid;
+    justify-content: center;
+}
+
+
+form{
+    display: grid;
+    padding: 2rem;
+   gap: 2rem;
+
+
+}
+.content{
+    width: 500px;
+
+}
