@@ -1,17 +1,25 @@
 section{
     display:grid;
     justify-content: center;
+     background-color: rgb(43, 101, 177); 
+   padding:4rem;
 }
 
 
 form{
     display: grid;
     padding: 2rem;
-   gap: 2rem;
+   gap: 3rem;
+
+   width: 450px;
+   background-color:slateblue;
 
 
 }
 .content{
-    width: 500px;
+    display: grid;
+    
+gap: 1rem;
+font-size:24px;
 
 }

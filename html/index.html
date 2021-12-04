@@ -13,19 +13,20 @@
 <body>
 
 <section>
-    <form class="form">
+    <form class="form" id="form">
 
         <div class="content">
             <label for="url" class="">
-                Poster
+                Agrega una Imagen
             </label>
 
-            <input type="text" class="form-control" id="url">
+            <input type="text" class="form-control" id="url" name="url" placeholder="Ingresa una url de IMG">
 
             <label for="nombre" id="nombre">
-                Nombre del poster
-             </label>
-            <input type="text" id="nombre" class="form-control">
+
+                Nombre de la imagen
+            </label>
+            <input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombre del Poster">
         </div>
 
         <div class="botonera">
@@ -39,7 +40,9 @@
         </div>
         
     </form>
+<div id="galeria" class="cards">
 
+</div>
     
 </section>
 

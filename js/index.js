@@ -1,25 +1,26 @@
 import Poster from "./clases/clasePoster.js";
-
-const urlPoster = document.getElementById("url").value;
-
-const nombrePoster = document.getElementById("nombre").value;
-
-const imprimir = document.getElementById("submit");
- 
 const galeria = document.getElementById("galeria");
 
+//function que imprime Poster
 
-const html = new Poster("https://www.loopeando.com/wp-content/uploads/2016/11/html5-1320x743.jpg", "HTML");
+function dinamico (imagen)  {
+  const div = document.createElement("div");
+  div.innerHTML = `
+  
+ <img src="${imagen.getUrl()}"/>
 
-const crearImg = (html) => {
-    
+ <h2>${imagen.getNombre()}</h2>
 
-    console.log(`
-    
-      <img src=${html.getUrl()} class="card" alt=${html.getNombre}>
-      <h2>${html.getNombre()}</h2>
-
-    `)
+  `
+  galeria.appendChild(div);
 }
-    
-crearImg(html)
+
+const form = document.getElementById("form");
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const target = e.target;
+  const poster = new Poster(target.url.value, target.nombre.value);
+  
+  dinamico(poster);
+})
